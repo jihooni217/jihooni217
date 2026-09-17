@@ -25,8 +25,9 @@
 - 공공 교통량 → 발생률 → 시뮬레이션. 대기 차량은 결과로만 사용
 - 한국식 4현시, 좌회전 전용 차로, 감응 신호, 시간대별 재분석
 - 보행자 없는 교차로, 시드 10개 평균: 통과 +11%, 정지 차량 −16%
-- API 키 없이도 녹화된 실제 응답으로 체험, 테스트 247개
+- 설치 없이 브라우저에서 바로 체험 (녹화된 실제 응답 재생), 테스트 252개
 
+<a href="https://jihooni217.github.io/FlowLight-AI-Traffic-Signal/"><img src="https://img.shields.io/badge/Live%20Demo-f97316?style=for-the-badge&logo=googlechrome&logoColor=white" alt="live demo" /></a>
 <a href="https://github.com/jihooni217/FlowLight-AI-Traffic-Signal"><img src="https://img.shields.io/badge/Repository-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="repo" /></a>
 <a href="https://github.com/jihooni217/FlowLight-AI-Traffic-Signal/blob/main/README.en.md"><img src="https://img.shields.io/badge/English%20README-1d4ed8?style=for-the-badge" alt="english" /></a>
 
