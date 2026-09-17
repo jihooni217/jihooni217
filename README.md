@@ -54,10 +54,9 @@
 <tr>
 <td valign="top" width="50%">
 
-### 🔧 Now
+### 🔧 Recent
 
-- FlowLight 를 Solar Pro 4 데모 · 튜토리얼로 정리 중
-- 다음: 실제 공공 데이터 연동, 회전비율 반영
+- FlowLight: Solar Pro 4 멀티 에이전트 신호 데모 완성, 설치 없이 체험하는 공개 데모 배포
 
 </td>
 <td valign="top" width="50%">
