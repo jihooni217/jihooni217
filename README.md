@@ -23,7 +23,9 @@
 - 규칙 기반 **Guardrail** 을 통과한 계획만 적용
 - **FastAPI + SSE** 로 판단 과정을 단계별 스트리밍
 - 공공 교통량 → 발생률 → 시뮬레이션. 대기 차량은 결과로만 사용
-- 테스트 214개, 실제 API 검증 기록 포함
+- 한국식 4현시, 좌회전 전용 차로, 감응 신호, 시간대별 재분석
+- 보행자 없는 교차로, 시드 10개 평균: 통과 +11%, 정지 차량 −16%
+- API 키 없이도 녹화된 실제 응답으로 체험, 테스트 247개
 
 <a href="https://github.com/jihooni217/FlowLight-AI-Traffic-Signal"><img src="https://img.shields.io/badge/Repository-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="repo" /></a>
 <a href="https://github.com/jihooni217/FlowLight-AI-Traffic-Signal/blob/main/README.en.md"><img src="https://img.shields.io/badge/English%20README-1d4ed8?style=for-the-badge" alt="english" /></a>
@@ -54,7 +56,7 @@
 ### 🔧 Now
 
 - FlowLight 를 Upstage 공식 데모 · 튜토리얼로 정리 중
-- 데모 체험 가이드를 블로그 글로 작성 중
+- 데모 체험 가이드 원고를 Upstage에 보내고 검토를 기다리는 중
 - 다음: 실제 공공 데이터 연동, 회전비율 반영
 
 </td>
