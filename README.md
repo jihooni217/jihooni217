@@ -1,7 +1,7 @@
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,50:1d4ed8,100:f97316&height=220&section=header&text=Jihoon%20Lee&fontSize=64&fontColor=ffffff&fontAlignY=38&desc=AI%20%C2%B7%20Backend%20Developer&descSize=22&descAlignY=60&animation=fadeIn" width="100%" alt="Jihoon Lee" />
 
 <p align="center">
-  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3200&pause=900&color=60A5FA&center=true&vCenter=true&width=640&lines=LLM+Agents+that+get+verified+before+they+ship;FastAPI+%C2%B7+SSE+%C2%B7+Structured+Outputs+%C2%B7+Guardrail;Building+an+Upstage+Solar+Pro+4+demo" alt="typing" /></a>
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=20&duration=3200&pause=900&color=60A5FA&center=true&vCenter=true&width=640&lines=LLM+Agents+that+get+verified+before+they+ship;FastAPI+%C2%B7+SSE+%C2%B7+Structured+Outputs+%C2%B7+Guardrail;Built+an+Upstage+Solar+Pro+4+demo" alt="typing" /></a>
 </p>
 
 <p align="center">
