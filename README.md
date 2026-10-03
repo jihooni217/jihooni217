@@ -31,6 +31,7 @@
 <a href="https://jihooni217.github.io/FlowLight-AI-Traffic-Signal/"><img src="https://img.shields.io/badge/Live%20Demo-f97316?style=for-the-badge&logo=googlechrome&logoColor=white" alt="live demo" /></a>
 <a href="https://github.com/jihooni217/FlowLight-AI-Traffic-Signal"><img src="https://img.shields.io/badge/Repository-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="repo" /></a>
 <a href="https://github.com/jihooni217/FlowLight-AI-Traffic-Signal/blob/main/README.en.md"><img src="https://img.shields.io/badge/English%20README-1d4ed8?style=for-the-badge" alt="english" /></a>
+<a href="https://edu.upstage.ai/blog/daegu-bootcamp-flowlight"><img src="https://img.shields.io/badge/Upstage%20Blog-7c3aed?style=for-the-badge" alt="upstage blog" /></a>
 
 </td>
 <td width="45%" valign="middle">
@@ -58,6 +59,7 @@
 ### 🔧 Recent
 
 - FlowLight: Solar Pro 4 멀티 에이전트 신호 데모 완성, 설치 없이 체험하는 공개 데모 배포
+- [Upstage Education 블로그](https://edu.upstage.ai/blog/daegu-bootcamp-flowlight)에 FlowLight 소개 글 게재 (2026-10)
 
 </td>
 <td valign="top" width="50%">
