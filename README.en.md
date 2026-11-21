@@ -85,7 +85,7 @@ A mobile web app for hourly part-time workers: log your own shifts, then find an
 - Editing or deleting a record keeps the before/after time and the reason.
 - Each record gets a **SHA-256** receipt number and a server registration time (**Supabase**).
 - Anyone can look up the registration time by receipt number on the verify page.
-- Only the receipt number goes to the server. Workplace, times and amounts stay on the phone.
+- Only the receipt number, record number and a random device ID go to the server. Workplace, times and amounts stay on the phone.
 - Records, edit history and the pay calculation export as one evidence PDF.
 - **React + Vite**, auto-deployed to GitHub Pages with GitHub Actions.
 
