@@ -44,10 +44,39 @@
 
 <br>
 
+<table align="center" border="0">
+<tr>
+<td width="45%" valign="middle">
+
+<a href="https://github.com/jihooni217/raspbot-pbl-3team"><img src="https://raw.githubusercontent.com/jihooni217/raspbot-pbl-3team/main/docs/media/outer_lap_4x.gif" width="100%" alt="Raspbot outer lap" /></a>
+
+</td>
+<td width="55%" valign="top">
+
+### 🚗 Raspbot 자율주행
+
+**Raspberry Pi 5** 소형차가 카메라 한 대로 트랙 한 바퀴를 스스로 주행 (대구대 PBL 3조 조장)
+
+- OpenCV 차선 추적 + 바닥 색으로 가속 · 감속
+- YOLO(ONNX)로 사람 · STOP 인식 후 정지, START 선에서 자동 정지
+- **지시서 주도 AI 협업**: 규칙표 · 숫자 성공 기준을 쓰고 Codex가 코드 작성
+- 바퀴 돌리기 전 사진 시험 · 가짜 장치 시험으로 먼저 검증
+- 실제 트랙 7판 모두 완주, 모서리 맞힘 28% → 81%
+- 글 명령은 AI가 허용 동작 하나만 JSON으로 고르는 가드레일 구조
+
+<a href="https://github.com/jihooni217/raspbot-pbl-3team"><img src="https://img.shields.io/badge/Repository-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="repo" /></a>
+<a href="https://github.com/jihooni217/raspbot-pbl-3team/blob/main/README.en.md"><img src="https://img.shields.io/badge/English%20README-1d4ed8?style=for-the-badge" alt="english" /></a>
+
+</td>
+</tr>
+</table>
+
+<br>
+
 <h3 align="center">Stack</h3>
 
 <p align="center">
-  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python,fastapi,js,html,unity,cs,git,github&perline=8" alt="stack" /></a>
+  <a href="https://skillicons.dev"><img src="https://skillicons.dev/icons?i=python,fastapi,opencv,raspberrypi,js,html,unity,cs,git,github&perline=10" alt="stack" /></a>
 </p>
 
 <br>
@@ -60,6 +89,7 @@
 
 - FlowLight: Solar Pro 4 멀티 에이전트 신호 데모 완성, 설치 없이 체험하는 공개 데모 배포
 - [Upstage Education 블로그](https://edu.upstage.ai/blog/daegu-bootcamp-flowlight)에 FlowLight 소개 글 게재 (2026-10)
+- Raspbot 자율주행: 대구대 PBL 조장, 실제 트랙 한 바퀴 자율주행 시연 (2026-11)
 
 </td>
 <td valign="top" width="50%">
