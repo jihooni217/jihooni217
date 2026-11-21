@@ -10,6 +10,7 @@
 </p>
 
 <p align="center">
+  <a href="README.en.md"><img src="https://img.shields.io/badge/English-README-0f172a?style=flat-square" alt="English README" /></a>
   <a href="https://jihooni217.github.io/FlowLight-AI-Traffic-Signal/"><img src="https://img.shields.io/badge/FlowLight-Live%20Demo-f97316?style=flat-square&logo=googlechrome&logoColor=white" alt="FlowLight Live Demo" /></a>
   <a href="https://jihooni217.github.io/albaguard/"><img src="https://img.shields.io/badge/%EC%95%8C%EB%B0%94%EA%B0%80%EB%93%9C-Live%20App-1d4ed8?style=flat-square&logo=googlechrome&logoColor=white" alt="알바가드 Live App" /></a>
   <a href="https://edu.upstage.ai/blog/daegu-bootcamp-flowlight"><img src="https://img.shields.io/badge/Upstage%20Blog-%EC%86%8C%EA%B0%9C%20%EA%B8%80-7c3aed?style=flat-square" alt="Upstage Blog 소개 글" /></a>
