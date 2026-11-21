@@ -5,8 +5,8 @@
 </p>
 
 <p align="center">
-  <b>I build systems that never use an AI's answer as-is: only output that passes a check gets applied.</b><br>
-  LLM Agent · FastAPI · SSE · OpenCV · YOLO
+  I study AI and backend development in the Software department at Daegu University.<br>
+  I mostly build servers with an LLM inside, and demos anyone can open right away.
 </p>
 
 <p align="center">
@@ -21,38 +21,29 @@
 
 ## 📌 At a Glance
 
-| Project | What | My role | Try it |
+| Project | What | Role | Try it |
 |---|---|---|---|
-| 🚦 [FlowLight](https://github.com/jihooni217/FlowLight-AI-Traffic-Signal) | Three LLM Agents plan intersection traffic signals | Repo owner | [Live Demo](https://jihooni217.github.io/FlowLight-AI-Traffic-Signal/) |
+| 🚦 [FlowLight](https://github.com/jihooni217/FlowLight-AI-Traffic-Signal) | Three LLM Agents plan intersection signals | Personal project | [Live Demo](https://jihooni217.github.io/FlowLight-AI-Traffic-Signal/) |
 | 🎁 [KeepCon](https://github.com/Jiwonang/KeepCon) | Collect gift vouchers and share them with family and friends | Team member | [Repository](https://github.com/Jiwonang/KeepCon) |
-| 🛡️ [AlbaGuard](https://github.com/jihooni217/albaguard) | Mobile web app that finds unpaid part-time wages from your own records | Repo owner | [Open app](https://jihooni217.github.io/albaguard/) |
+| 🛡️ [AlbaGuard](https://github.com/jihooni217/albaguard) | Mobile web app for finding unpaid part-time wages from your own records | Personal project | [Open app](https://jihooni217.github.io/albaguard/) |
 | 🚗 [Raspbot](https://github.com/jihooni217/raspbot-pbl-3team) | Small self-driving car that laps a track with one camera | Team 3 leader (PBL) | [Code · video](https://github.com/jihooni217/raspbot-pbl-3team) |
 
 <br>
 
 ## 🚦 FlowLight
 
-A Multi-Agent demo that analyzes, plans and evaluates intersection signals with **Upstage Solar Pro 4**.
+A Multi-Agent demo that plans intersection signals with Upstage Solar Pro 4. It started from a simple idea: skip the walk signal when nobody is at the crosswalk, and give more time when a child or a wheelchair user is crossing.
 
 <a href="https://jihooni217.github.io/FlowLight-AI-Traffic-Signal/"><img src="https://raw.githubusercontent.com/jihooni217/FlowLight-AI-Traffic-Signal/main/docs/flowlight_live_demo.gif" width="640" alt="FlowLight demo: the Agents show the signal plan step by step" /></a>
 
-**My role**
-- Defined the prompts and JSON Schema for the three Agents.
-- Built the FastAPI server, SSE streaming and the Guardrail.
-- Designed and ran the 10-seed comparison, and presented the project.
+Three Agents take turns: one reads the traffic, one plans the signal times, and one reviews the plan. Their output is held to a JSON Schema, and only plans that pass a rule-based Guardrail (minimum green time, cycle total) go into the simulator. FastAPI and SSE stream each step to the screen as it happens.
 
-**How**
-- Agent output is locked to a **JSON Schema**.
-- Only plans that pass a rule-based **Guardrail** reach the signal.
-- **FastAPI + SSE** streams each reasoning step to the browser.
-- Real Seoul traffic counts (one day around Sungnyemun) ship as a second profile.
-- Runs in the browser with no install, by replaying recorded real responses.
+I did the prompts and Schema, the server and Guardrail, the simulator hookup, the comparison runs, and the presentation.
 
-**Results**
-- Intersection with no pedestrians, average of 10 seeds: +11% cars through, −16% stopped cars.
-- The baseline is a fixed schedule that gives a walk signal every cycle, even with nobody waiting.
-- Most of the gain is that unused walk time handed back to cars. The repo states the evidence and the limits.
-- 286 tests.
+- At an intersection with no pedestrians, averaged over 10 seeds, 11% more cars got through and 16% fewer were stopped. The baseline is a fixed schedule that gives a walk signal every cycle, even when nobody is there.
+- Most of that gain came from handing the empty walk time back to cars. The effect of the LLM re-splitting time between the two directions stayed inside the margin of error.
+- It also ships one day of real traffic counts from around Sungnyemun in Seoul, and has 286 tests.
+- The public demo runs without a server by replaying real responses recorded earlier.
 
 <a href="https://jihooni217.github.io/FlowLight-AI-Traffic-Signal/"><img src="https://img.shields.io/badge/Live%20Demo-f97316?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Live Demo" /></a>
 <a href="https://github.com/jihooni217/FlowLight-AI-Traffic-Signal"><img src="https://img.shields.io/badge/Repository-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="Repository" /></a>
@@ -63,13 +54,11 @@ A Multi-Agent demo that analyzes, plans and evaluates intersection signals with 
 
 ## 🎁 KeepCon <sub>team project</sub>
 
-A **Flutter** app that gathers gift vouchers scattered across apps in one place, with group sharing for family and friends.
+A Flutter app that pulls gift vouchers scattered across different apps into one place, so family or friends can share them as a group. The original repository is [Jiwonang/KeepCon](https://github.com/Jiwonang/KeepCon), and I joined as a team member.
 
-- The original repository is [Jiwonang/KeepCon](https://github.com/Jiwonang/KeepCon). I took part as a team member.
-- The team split four pages (Home · Scan/Add · Share · Login/Settings) by owner and built them in parallel.
-- Shared models live only in `lib/shared`. A CI SSOT guard blocks redefinitions.
-- No direct pushes to `main` or `develop`. Changes merge only through a PR that passes CI.
-- Tech: Flutter (Dart) · Riverpod · Firebase (Auth, Firestore)
+We split four pages (Home, Scan/Add, Share, Login/Settings) by owner and built them at the same time. Models used by more than one page lived only in `lib/shared`, and CI blocked duplicate definitions. Nothing went into `main` or `develop` without a PR that passed CI.
+
+Built with Flutter (Dart), Riverpod, and Firebase (Auth, Firestore).
 
 <a href="https://github.com/Jiwonang/KeepCon"><img src="https://img.shields.io/badge/Repository-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="Repository" /></a>
 
@@ -77,17 +66,16 @@ A **Flutter** app that gathers gift vouchers scattered across apps in one place,
 
 ## 🛡️ AlbaGuard
 
-A mobile web app for hourly part-time workers: log your own shifts, then find and request wages you were underpaid.
+A mobile web app that helps college students on hourly part-time jobs log their own shifts, then find and ask for wages they were underpaid.
 
 <a href="https://jihooni217.github.io/albaguard/"><img src="https://raw.githubusercontent.com/jihooni217/albaguard/main/public/og.png" width="640" alt="AlbaGuard: find unpaid wages with your own records" /></a>
 
-- One flow: log shifts → compare with what was actually paid → draft a settlement request.
-- Editing or deleting a record keeps the before/after time and the reason.
-- Each record gets a **SHA-256** receipt number and a server registration time (**Supabase**).
-- Anyone can look up the registration time by receipt number on the verify page.
+- It compares your records with what was actually paid, finds the gap, and drafts the message to send to your employer.
+- If you edit or delete a record, it keeps when and why.
+- Each record gets a SHA-256 receipt number, stored in Supabase with a registration time. Anyone can look that time up on the verify page.
 - Only the receipt number, record number and a random device ID go to the server. Workplace, times and amounts stay on the phone.
-- Records, edit history and the pay calculation export as one evidence PDF.
-- **React + Vite**, auto-deployed to GitHub Pages with GitHub Actions.
+- Records, edit history and the pay calculation export as a single PDF.
+- Built with React and Vite, and deployed to GitHub Pages with GitHub Actions.
 
 <a href="https://jihooni217.github.io/albaguard/"><img src="https://img.shields.io/badge/Open%20App-1d4ed8?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Open App" /></a>
 <a href="https://github.com/jihooni217/albaguard"><img src="https://img.shields.io/badge/Repository-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="Repository" /></a>
@@ -97,37 +85,22 @@ A mobile web app for hourly part-time workers: log your own shifts, then find an
 
 ## 🚗 Raspbot Self-Driving Car
 
-A small self-driving car that laps a track on its own with a single camera. **Raspberry Pi 5**, Daegu University PBL Team 3.
+A small self-driving car that laps a track on its own with a single camera. It runs on a Raspberry Pi 5, and I led Team 3 in the Daegu University PBL course.
 
 <a href="https://github.com/jihooni217/raspbot-pbl-3team"><img src="https://raw.githubusercontent.com/jihooni217/raspbot-pbl-3team/main/docs/media/outer_lap_4x.gif" width="640" alt="Raspbot lapping the outer loop of the track (4x speed)" /></a>
 
-**My role** (team leader · led the work)
-- Wrote a spec for every feature myself: goal, rule table, numeric success criteria, safety rules.
-- Merged the demo code into one program and tuned it on the real track until all 7 runs finished.
-- Found causes by putting run logs next to the robot's camera video. The outer-loop logs alone pass 60 runs.
+It follows the lane with OpenCV and changes speed by floor color. YOLO makes it stop for a person or a STOP sign, and it pulls up on its own when it gets back to the START line.
 
-**How**
-- OpenCV follows the lane, and the car speeds up or slows down by floor color.
-- YOLO stops the car for a person or a STOP sign. It also stops by itself at the START line.
-- **Spec-driven AI pair programming**: I write the rules and numeric success criteria, and Codex writes the code.
-- Every change is tested on photos and a fake device before the wheels turn.
-- Text commands use a Guardrail: the AI may pick only one of 11 fixed actions.
+Codex wrote the code. My side was writing a spec for each feature: goal, rule table, numeric success criteria, and safety rules. Before the wheels turned, every change was tested on photos and a fake device. When a run went wrong, I put the run log next to the camera video to find the cause. The outer-loop logs alone pass 60 runs. For the demo, I merged these features into one program.
 
-**Results**
-- All 7 runs on the real track's outer loop finished (demo day, 37–44 s).
-- Lane corner decisions in the photo test: 28% → 81%.
+- On demo day, all 7 runs on the real track's outer loop finished (37–44 s).
+- In the photo test, corner decisions went from 28% to 81%.
+- For text commands, the AI may pick only one of 11 fixed actions and turns down anything else.
 
 <a href="https://github.com/jihooni217/raspbot-pbl-3team"><img src="https://img.shields.io/badge/Repository-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="Repository" /></a>
 <a href="https://github.com/jihooni217/raspbot-pbl-3team/blob/main/README.en.md"><img src="https://img.shields.io/badge/English%20README-1d4ed8?style=for-the-badge" alt="English README" /></a>
 
 <br><br>
-
-## 🧭 How I Work
-
-- **Check AI output before applying it**: lock the format, and use only what passes the Guardrail.
-- **Test before anything moves**: try fake devices and tests before the real robot or real service.
-- **Hand AI a spec**: people write the rules and numeric success criteria, and the AI writes the code.
-- **Ship something you can open**: publish demos and apps that run in the browser with no install.
 
 ## Stack
 
@@ -137,9 +110,8 @@ A small self-driving car that laps a track on its own with a single camera. **Ra
 
 ## 🔧 Recent
 
-- 2026-11 · Raspbot self-driving: Daegu University PBL team leader, live demo of a full autonomous lap
-- 2026-10 · FlowLight featured on the [Upstage Education blog](https://edu.upstage.ai/blog/daegu-bootcamp-flowlight)
-- FlowLight · AlbaGuard: public demo and web app you can use with no install
+- 2026-11 · Raspbot self-driving demo at the Daegu University PBL (Team 3 leader)
+- 2026-10 · FlowLight was featured on the [Upstage Education blog](https://edu.upstage.ai/blog/daegu-bootcamp-flowlight)
 
 <br>
 
