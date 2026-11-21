@@ -23,9 +23,9 @@
 | 프로젝트 | 무엇 | 내 자리 | 바로 보기 |
 |---|---|---|---|
 | 🚦 [FlowLight](https://github.com/jihooni217/FlowLight-AI-Traffic-Signal) | LLM Agent 3개가 교차로 신호를 계획하는 데모 | 레포 주인 | [Live Demo](https://jihooni217.github.io/FlowLight-AI-Traffic-Signal/) |
-| 🚗 [Raspbot 자율주행](https://github.com/jihooni217/raspbot-pbl-3team) | 카메라 한 대로 트랙을 도는 소형 자율주행차 | PBL 3조 조장 | [코드·영상](https://github.com/jihooni217/raspbot-pbl-3team) |
-| 🛡️ [알바가드](https://github.com/jihooni217/albaguard) | 못 받은 알바비를 기록으로 찾는 모바일 웹앱 | 레포 주인 | [앱 열기](https://jihooni217.github.io/albaguard/) |
 | 🎁 [KeepCon](https://github.com/Jiwonang/KeepCon) | 기프티콘을 모아 가족·친구와 함께 쓰는 앱 | 팀 프로젝트 참여 | [저장소](https://github.com/Jiwonang/KeepCon) |
+| 🛡️ [알바가드](https://github.com/jihooni217/albaguard) | 못 받은 알바비를 기록으로 찾는 모바일 웹앱 | 레포 주인 | [앱 열기](https://jihooni217.github.io/albaguard/) |
+| 🚗 [Raspbot 자율주행](https://github.com/jihooni217/raspbot-pbl-3team) | 카메라 한 대로 트랙을 도는 소형 자율주행차 | PBL 3조 조장 | [코드·영상](https://github.com/jihooni217/raspbot-pbl-3team) |
 
 <br>
 
@@ -60,6 +60,40 @@
 
 <br><br>
 
+## 🎁 KeepCon <sub>팀 프로젝트 참여</sub>
+
+여러 앱에 흩어진 기프티콘을 한 곳에서 관리하고, 그룹 공유로 가족·친구가 함께 쓰는 **Flutter** 앱입니다.
+
+- 원본 저장소는 [Jiwonang/KeepCon](https://github.com/Jiwonang/KeepCon)이고, 저는 팀원으로 참여했습니다.
+- 4개 페이지(홈 · 스캔·추가 · 공유 · 로그인/설정)를 담당자별로 나눠 함께 개발했습니다.
+- 공유 모델은 `lib/shared` 한 곳에만 둡니다. CI의 SSOT guard가 재정의를 막습니다.
+- `main`·`develop`에는 직접 push하지 않고, PR과 CI를 통과해야 합칩니다.
+- 기술: Flutter(Dart) · Riverpod · Firebase(Auth, Firestore)
+
+<a href="https://github.com/Jiwonang/KeepCon"><img src="https://img.shields.io/badge/Repository-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="Repository" /></a>
+
+<br><br>
+
+## 🛡️ 알바가드
+
+시급제 알바생이 혼자 출퇴근을 기록하고, 덜 받은 급여를 찾아 요청하는 모바일 웹앱입니다.
+
+<a href="https://jihooni217.github.io/albaguard/"><img src="https://raw.githubusercontent.com/jihooni217/albaguard/main/public/og.png" width="640" alt="알바가드: 못 받은 알바비, 기록으로 찾는 앱" /></a>
+
+- 기록 → 실제 입금액과 비교 → 정산 요청 문구까지 이어집니다.
+- 기록을 고치거나 지우면 전후 시각과 사유가 남습니다.
+- 기록마다 **SHA-256** 확인 번호와 서버 등록 시각을 남깁니다 (**Supabase**).
+- 누구나 확인 페이지에서 확인 번호로 등록 시각을 볼 수 있습니다.
+- 서버에는 확인 번호만 갑니다. 근무지·시각·금액은 폰 밖으로 나가지 않습니다.
+- 근무 기록·수정 이력·계산 근거를 증빙 PDF 한 묶음으로 저장합니다.
+- **React + Vite**, GitHub Actions로 GitHub Pages에 자동 배포합니다.
+
+<a href="https://jihooni217.github.io/albaguard/"><img src="https://img.shields.io/badge/%EC%95%B1%20%EC%97%B4%EA%B8%B0-1d4ed8?style=for-the-badge&logo=googlechrome&logoColor=white" alt="앱 열기" /></a>
+<a href="https://github.com/jihooni217/albaguard"><img src="https://img.shields.io/badge/Repository-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="Repository" /></a>
+<a href="https://jihooni217.github.io/albaguard/verify.html"><img src="https://img.shields.io/badge/%ED%99%95%EC%9D%B8%20%ED%8E%98%EC%9D%B4%EC%A7%80-0f766e?style=for-the-badge" alt="확인 페이지" /></a>
+
+<br><br>
+
 ## 🚗 Raspbot 자율주행
 
 카메라 한 대로 트랙 한 바퀴를 스스로 달리는 소형 자율주행차입니다. **Raspberry Pi 5**, 대구대 PBL 3조.
@@ -84,40 +118,6 @@
 
 <a href="https://github.com/jihooni217/raspbot-pbl-3team"><img src="https://img.shields.io/badge/Repository-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="Repository" /></a>
 <a href="https://github.com/jihooni217/raspbot-pbl-3team/blob/main/README.en.md"><img src="https://img.shields.io/badge/English%20README-1d4ed8?style=for-the-badge" alt="English README" /></a>
-
-<br><br>
-
-## 🛡️ 알바가드
-
-시급제 알바생이 혼자 출퇴근을 기록하고, 덜 받은 급여를 찾아 요청하는 모바일 웹앱입니다.
-
-<a href="https://jihooni217.github.io/albaguard/"><img src="https://raw.githubusercontent.com/jihooni217/albaguard/main/public/og.png" width="640" alt="알바가드: 못 받은 알바비, 기록으로 찾는 앱" /></a>
-
-- 기록 → 실제 입금액과 비교 → 정산 요청 문구까지 이어집니다.
-- 기록을 고치거나 지우면 전후 시각과 사유가 남습니다.
-- 기록마다 **SHA-256** 확인 번호와 서버 등록 시각을 남깁니다 (**Supabase**).
-- 누구나 확인 페이지에서 확인 번호로 등록 시각을 볼 수 있습니다.
-- 서버에는 확인 번호만 갑니다. 근무지·시각·금액은 폰 밖으로 나가지 않습니다.
-- 근무 기록·수정 이력·계산 근거를 증빙 PDF 한 묶음으로 저장합니다.
-- **React + Vite**, GitHub Actions로 GitHub Pages에 자동 배포합니다.
-
-<a href="https://jihooni217.github.io/albaguard/"><img src="https://img.shields.io/badge/%EC%95%B1%20%EC%97%B4%EA%B8%B0-1d4ed8?style=for-the-badge&logo=googlechrome&logoColor=white" alt="앱 열기" /></a>
-<a href="https://github.com/jihooni217/albaguard"><img src="https://img.shields.io/badge/Repository-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="Repository" /></a>
-<a href="https://jihooni217.github.io/albaguard/verify.html"><img src="https://img.shields.io/badge/%ED%99%95%EC%9D%B8%20%ED%8E%98%EC%9D%B4%EC%A7%80-0f766e?style=for-the-badge" alt="확인 페이지" /></a>
-
-<br><br>
-
-## 🎁 KeepCon <sub>팀 프로젝트 참여</sub>
-
-여러 앱에 흩어진 기프티콘을 한 곳에서 관리하고, 그룹 공유로 가족·친구가 함께 쓰는 **Flutter** 앱입니다.
-
-- 원본 저장소는 [Jiwonang/KeepCon](https://github.com/Jiwonang/KeepCon)이고, 저는 팀원으로 참여했습니다.
-- 4개 페이지(홈 · 스캔·추가 · 공유 · 로그인/설정)를 담당자별로 나눠 함께 개발했습니다.
-- 공유 모델은 `lib/shared` 한 곳에만 둡니다. CI의 SSOT guard가 재정의를 막습니다.
-- `main`·`develop`에는 직접 push하지 않고, PR과 CI를 통과해야 합칩니다.
-- 기술: Flutter(Dart) · Riverpod · Firebase(Auth, Firestore)
-
-<a href="https://github.com/Jiwonang/KeepCon"><img src="https://img.shields.io/badge/Repository-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="Repository" /></a>
 
 <br><br>
 
