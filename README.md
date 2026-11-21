@@ -55,14 +55,14 @@
 
 ### 🚗 Raspbot 자율주행
 
-**Raspberry Pi 5** 소형차가 카메라 한 대로 트랙 한 바퀴를 스스로 주행 (대구대 PBL 3조 조장)
+카메라 한 대로 트랙 한 바퀴를 스스로 달리는 소형 자율주행차 · **Raspberry Pi 5** (대구대 PBL 3조 조장)
 
-- OpenCV 차선 추적 + 바닥 색으로 가속 · 감속
-- YOLO(ONNX)로 사람 · STOP 인식 후 정지, START 선에서 자동 정지
-- **지시서 주도 AI 협업**: 규칙표 · 숫자 성공 기준을 쓰고 Codex가 코드 작성
-- 바퀴 돌리기 전 사진 시험 · 가짜 장치 시험으로 먼저 검증
-- 실제 트랙 7판 모두 완주, 모서리 맞힘 28% → 81%
-- 글 명령은 AI가 허용 동작 하나만 JSON으로 고르는 가드레일 구조
+- OpenCV 차선 추적, 바닥 색에 따라 가속·감속
+- YOLO로 사람·STOP 표지를 보면 정지, START 선에서 자동 정지
+- **지시서 주도 AI 협업**: 내가 규칙과 숫자 성공 기준을 쓰고, Codex가 코드를 작성
+- 바퀴를 돌리기 전에 사진 시험·가짜 장치 시험으로 먼저 검증
+- 실제 트랙 7판 모두 완주 · 사진 시험 모서리 판단 28% → 81%
+- 글 명령은 AI가 정해진 동작 11개 중 하나만 고르는 가드레일 구조
 
 <a href="https://github.com/jihooni217/raspbot-pbl-3team"><img src="https://img.shields.io/badge/Repository-0f172a?style=for-the-badge&logo=github&logoColor=white" alt="repo" /></a>
 <a href="https://github.com/jihooni217/raspbot-pbl-3team/blob/main/README.en.md"><img src="https://img.shields.io/badge/English%20README-1d4ed8?style=for-the-badge" alt="english" /></a>
